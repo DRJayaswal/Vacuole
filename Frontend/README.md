@@ -82,3 +82,4 @@ If you encounter issues with sending the sign-in link, ensure that:
 ## License
 
 This project is licensed under the MIT License.
+

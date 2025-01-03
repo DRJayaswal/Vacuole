@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { getAuth, signInWithPopup, sendSignInLinkToEmail } from "firebase/auth";
+import {
+  getAuth,
+  signInWithPopup,
+  sendSignInLinkToEmail
+} from "firebase/auth";
 import { GoogleAuthProvider } from 'firebase/auth';
 import provider from '../utils/FAuthProvider.tsx';
 import googleLogo from '../assets/googleLogo.png';
@@ -15,27 +19,24 @@ const actionCodeSettings = {
 const Signin = () => {
   const [email, setEmail] = useState("");
   const auth = getAuth(app);
-
   async function OnSignInUsingGMail() {
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
+      alert("Please enter a valid email address.");
+      return;
     }
 
     console.log("Sending sign-in link to email:", email);
 
     await sendSignInLinkToEmail(auth, email, actionCodeSettings)
-        .then(() => {
-            window.localStorage.setItem('emailForSignIn', email);
-            alert("Email sent successfully!");
-        })
-        .catch((e) => {
-          alert("Error sending email");
-          console.log("Error sending email: " + e.message);
-        });
-}
-
-
+      .then(() => {
+        window.localStorage.setItem('emailForSignIn', email);
+        alert("Email sent successfully!");
+      })
+      .catch((e) => {
+        alert("Error sending email");
+        console.log("Error sending email: " + e.message);
+      });
+  }
   async function OnSigninUsingGoogle() {
     await signInWithPopup(auth, provider)
       .then((result) => {
@@ -53,8 +54,9 @@ const Signin = () => {
         // const credential = GoogleAuthProvider.credentialFromError(error);
       });
   }
-  return (
-    <div>
+
+    return (
+      <div>
       <div className="loginPanel">
         <div className='loginTitle'>
           <h1>Get Started with <span>Vacuole</span></h1>
@@ -93,7 +95,7 @@ const Signin = () => {
 
       </div>
     </div>
-  )
+    )
 }
 
 export default Signin;

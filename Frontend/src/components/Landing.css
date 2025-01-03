@@ -1,0 +1,30 @@
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: space-evenly;
+}
+.landing-logo{
+    object-fit: cover;
+    width: 400px;
+    height: 160px;
+}
+.landing-title{
+    padding-top: 20px;
+    padding-left: 30px;
+    font-weight: 900;
+    font-size:300%;
+}
+.landing-tagLine{
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 150%;
+}
+.landing-description{
+    padding-left: 30px;
+    font-weight: 300;
+    font-size: 100%;
+}
+.landing-title,.landing-tagLine,.landing-description{
+    width: fit-content;
+}

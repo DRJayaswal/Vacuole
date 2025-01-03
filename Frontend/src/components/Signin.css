@@ -1,0 +1,92 @@
+.loginPanel{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+.loginTitle{
+    display: flex;
+}
+.loginTitle h1{
+    font-size: 90%;
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+}
+.loginTitle h1 span{
+    font-size: 120%;
+    font-weight: 700;
+    color: #5271ff;
+}
+.googleLogin{
+    padding: 7px 20px ;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.googleLogin:hover{
+    scale: 1.05;
+    border-color:#5271ff;
+}
+.loginLogo{
+    width: 50px;
+    height: 50px;
+}
+.loginType{
+    padding-right: 5px;
+    font-size: 70%;
+    font-weight: 400;
+}
+
+.loginRuler{
+    border: 1px solid #5271ff;
+    width: 100%;
+}
+
+.emailLogin {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:90%;
+}
+.emailInput {
+    width: 110%;
+    padding: 10px;
+    border: 1px solid #5271ff;
+    border-radius: 40px 40px 0px 0px;
+    text-align: center;
+    font-size: 60%;
+}
+.emailInput::placeholder{
+    color: #a2b2f8;
+    font-size:100%;
+    text-align: center;
+}
+.emailLoginButton {
+    width: 110%;
+    padding: 10px 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 40px 40px;
+    background-color: white;
+    color: #5271ff;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+    font-size: 110%;
+    font-weight: 400;
+}
+.emailLoginButton:hover {
+    color: white;
+    background-color: #5271ff;
+}
+
